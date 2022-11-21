@@ -12,8 +12,10 @@ class TestNominatim():
                    1] == 'White House, 1600, Pennsylvania Avenue Northwest, Washington, District of Columbia, 20500, United States'
 
     def test_location_name_into_lag_lng(self):
-        loc = 'Machu Picchu'
-        assert_point = Point(-72.54508510173372, -13.164421950000001)
+        loc = 'Baku'
+        assert_point = Point(49.8328009, 40.3755885)
         location = geocode(loc, provider="nominatim", user_agent='my_request')
         point = location.geometry.iloc[0]
+        print(point)
         assert assert_point == point
+
