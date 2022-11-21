@@ -16,6 +16,6 @@ class TestNominatim():
         assert_point = Point(49.8328009, 40.3755885)
         location = geocode(loc, provider="nominatim", user_agent='my_request')
         point = location.geometry.iloc[0]
-        print(point)
+
         assert assert_point == point
 
